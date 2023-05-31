@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Camera Permisson</string>
-    <string name="title_activity_main2">MainActivity2</string>
+    <string name="app_name">Android Library</string>
 
 </resources>
