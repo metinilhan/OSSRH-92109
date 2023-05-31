@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "Camera Permisson"
 include ':app'
 include ':libraryA'
+include ':libraryB'
