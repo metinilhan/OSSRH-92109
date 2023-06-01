@@ -28,18 +28,16 @@ android {
 publishing {
     publications {
         release(MavenPublication) {
-            groupId = 'com.huawei'
+            groupId = 'com.mtmt.c'
             artifactId = 'libraryc'
-            version = '2.0'
+            version = '3.0'
             String filePath = rootProject.getRootDir().path+ File.separator + project.name+ File.separator + "build"+ File.separator + "outputs"+ File.separator + "aar"+ File.separator + project.name + "-release.aar"
             artifact(filePath)
         }
-
-    }
-    repositories {
-        maven {
-            url "D:/maven"
+        repositories {
+            maven()
         }
+
     }
 }
 dependencies {
