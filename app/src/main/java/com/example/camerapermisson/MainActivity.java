@@ -15,6 +15,8 @@ import androidx.core.app.ActivityCompat;
 import com.example.camerapermisson.databinding.ActivityMainBinding;
 import com.huawei.librarya.LibraryA;
 import com.huawei.libraryb.LibraryB;
+import com.huawei.*;
+import com.huawei.libraryc.LibraryC;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,11 +28,15 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
         LibraryA libraryA = new LibraryA();
         binding.txt1.setText(libraryA.getModuleName());
+
         LibraryB libraryB = new LibraryB();
         binding.txt2.setText(libraryB.getModuleName());
 
+        LibraryC libraryC = new LibraryC();
+        binding.txt3.setText(libraryC.getModuleName());
     }
 
 }

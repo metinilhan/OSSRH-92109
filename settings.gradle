@@ -3,6 +3,10 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        mavenLocal()
+        maven {
+            url "D:/maven"
+        }
     }
 }
 dependencyResolutionManagement {
@@ -10,9 +14,14 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
+        maven {
+            url "D:/maven"
+        }
     }
 }
 rootProject.name = "Camera Permisson"
 include ':app'
 include ':libraryA'
 include ':libraryB'
+include ':libraryC'
