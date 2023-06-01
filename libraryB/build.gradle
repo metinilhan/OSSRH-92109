@@ -22,7 +22,30 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    android.libraryVariants.all {
+        variant ->
+            variant.outputs.all {output->
+                outputFileName = 'librarB.aar'
+            }
+    }
+
 }
+task finalize {
+    doLast {
+        android.libraryVariants.all {
+            variant ->
+                variant.outputs.all {output->
+                    copy {
+                        from output.outputFile
+                        into rootDir.absolutePath+'/app/libs'
+                    }
+
+                }
+        }
+    }
+}
+build.finalizedBy(finalize)
 
 dependencies {
 
